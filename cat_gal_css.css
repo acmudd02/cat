@@ -1,0 +1,45 @@
+.gal{
+  background-color: #00ffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content_1{
+  border-style: solid;
+  border-color: white;
+  flex: 1;
+}
+.content_2{
+  border-style: solid;
+  border-color: white;
+  flex: 1;
+
+}.content_3{
+  border-style: solid;
+  border-color: white;
+  flex: 1;
+}.content_4{
+  border-style: solid;
+  border-color: white;
+  flex: 1;
+}.content_5{
+  border-style: solid;
+  border-color: white;
+  flex: 1;
+}
+
+/*=========================================
+              Media Queries
+=========================================*/
+
+           /*For Tablets*/
+@media only screen and (min-width:768px){
+.wrap{
+  flex-direction: row;
+}}
+          /*For PC Screens*/
+@media only screen and (min-width:1200px){
+.wrap{
+  flex-wrap: wrap;
+}

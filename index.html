@@ -1,0 +1,89 @@
+<html>
+<!-- This is a website I put together in order to practice with flexbox -->
+
+<header>
+<link rel="stylesheet" type="text/css" href="\\presfile01\faculty-documents\amudd\Programs\Cat\cat.css">
+<script src="https://code.jquery.com/jquery-1.6.2.min.js"></script>
+</header>
+<body>
+  <script>
+  jQuery(document).ready(function($) {
+
+  	$('.lightbox_trigger').click(function(e) {
+
+  		//prevent default action (hyperlink)
+  		e.preventDefault();
+
+  		//Get clicked link href
+  		var image_src = $(this).attr("src");
+
+  		if ($('#lightbox').length > 0) { // #lightbox exists
+
+  			//place href as img src value
+  			$('#content').html('<img src="' + image_src + '" />');
+
+  			//show lightbox window - you could use .show('fast') for a transition
+  			$('#lightbox').show();
+  		}
+
+  		else { //#lightbox does not exist - create and insert (runs 1st time only)
+
+  			//create HTML markup for lightbox window
+  			var lightbox =
+  			'<div id="lightbox">' +
+  				'<p>Click to close</p>' +
+  				'<div id="content">' + //insert clicked link's href into img src
+  					'<img src="' + image_src +'" />' +
+  				'</div>' +
+  			'</div>';
+
+  			//insert lightbox HTML into page
+  			$('body').append(lightbox);
+  		}
+
+  	});
+
+  	//Click anywhere on the page to get rid of lightbox window
+  	$('#lightbox').live('click', function() { //must use live, as the lightbox element is inserted into the DOM
+  		$('#lightbox').hide();
+  	});
+
+  });
+  </script>
+  <title>Cat</title>
+  <div class="banner">
+      <h1 id="name">Cat</h1>
+      <ul><a href="https://www.linkedin.com/in/adam-mudd-37b8b161">CatIn</a></ul>
+      <ul><a href="https://github.com/acmudd02">Cathub</a></ul>
+      <ul><a href="mailto:acmudd02@yahoo.com?Subject=I%20Visited%20Your%20Site!">Catmail</a></ul>
+  </div>
+  </div>
+  <div class="wrap">
+    <div class="content_1">
+      <img class="lightbox_trigger" src="https://placekitten.com/g/300/400">
+    </div>
+    <div class="content_2">
+      <p>Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat.</p>
+      <p>Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat. Cat cat cat cat cat cat cat cat cat cat cat cat cat.</P>
+
+
+      </p>
+    </div>
+    <div class="content_3">
+        <p>More ineffectively far jeepers beseechingly one endearing much much amid barring the ouch gecko one far outbid ape well far.</p>
+
+        <p>Left boyish far alas much far gaily retrospective by far primly rose because doubtful depending horse overrode mongoose bred but excepting.</p>
+
+        <p>Manatee wherever komodo more peered foolish much monkey much oh inclusively zebra hence moronically via much until seal spoiled more warthog gazelle tarantula hello.</p>
+
+        <p>Hey one during crud seagull factious pill jeepers more ignoble resigned admonishingly disconsolately or fish yikes spacious execrable witless impiously stubbornly around imminently the hideous oh flamingo.</p>
+
+        <p>Darn irrespective hyena quail much but goodness the brusquely falteringly thus smooth man-of-war deer one and hello darn a bird less without considering much.</p>
+    </div>
+  </div>
+<footer class="foot">
+  <img class="print"src="\\presfile01\faculty-documents\amudd\Programs\Cat\pawprint.jpg">
+  <p>Cat cat cat</p>
+  <a href="\\presfile01\faculty-documents\amudd\Programs\Cat\cat_gal.html"><img class="print"src="\\presfile01\faculty-documents\amudd\Programs\Cat\pawprint.jpg"></a>
+</footer>
+</html>

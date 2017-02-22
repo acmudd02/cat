@@ -1,0 +1,80 @@
+<html>
+  <header>
+    <link rel="stylesheet" type="text/css" href="\\presfile01\faculty-documents\amudd\Programs\Cat\cat.css">
+    <script src="https://code.jquery.com/jquery-1.6.2.min.js"></script>
+  </header>
+  <script>
+  jQuery(document).ready(function($) {
+
+  	$('.lightbox_trigger').click(function(e) {
+
+  		//prevent default action (hyperlink)
+  		e.preventDefault();
+
+  		//Get clicked link href
+  		var image_src = $(this).attr("src");
+
+  		if ($('#lightbox').length > 0) { // #lightbox exists
+
+  			//place href as img src value
+  			$('#content').html('<img src="' + image_src + '" />');
+
+  			//show lightbox window - you could use .show('fast') for a transition
+  			$('#lightbox').show();
+  		}
+
+  		else { //#lightbox does not exist - create and insert (runs 1st time only)
+
+  			//create HTML markup for lightbox window
+  			var lightbox =
+  			'<div id="lightbox">' +
+  				'<p>Click to close</p>' +
+  				'<div id="content">' + //insert clicked link's href into img src
+  					'<img src="' + image_src +'" />' +
+  				'</div>' +
+  			'</div>';
+
+  			//insert lightbox HTML into page
+  			$('body').append(lightbox);
+  		}
+
+  	});
+
+  	//Click anywhere on the page to get rid of lightbox window
+  	$('#lightbox').live('click', function() { //must use live, as the lightbox element is inserted into the DOM
+  		$('#lightbox').hide();
+  	});
+
+  });
+  </script>
+  <body class="gal">
+    <div class="banner">
+        <h1 id="name">Cat</h1>
+        <ul><a href="https://www.linkedin.com/in/adam-mudd-37b8b161">CatIn</a></ul>
+        <ul><a href="https://github.com/acmudd02">Cathub</a></ul>
+        <ul><a href="mailto:acmudd02@yahoo.com?Subject=I%20Visited%20Your%20Site!">Catmail</a></ul>
+    </div>
+    <div class="wrap">
+    <div class="content_1">
+      <img class="lightbox_trigger" src="https://placekitten.com/g/300/500">
+    </div>
+    <div class="content_1">
+      <img class="lightbox_trigger" src="https://placekitten.com/g/300/500">
+    </div>
+    <div class="content_1">
+      <img class="lightbox_trigger" src="https://placekitten.com/g/300/500">
+    </div>
+    <div class="content_1">
+      <img class="lightbox_trigger" src="https://placekitten.com/g/300/500">
+    </div>
+    <div class="content_1">
+      <img class="lightbox_trigger" src="https://placekitten.com/g/300/500">
+    </div>
+  </div
+  </body>
+  <footer class="foot">
+    <img class="print"src="\\presfile01\faculty-documents\amudd\Programs\Cat\pawprint.jpg">
+    <p>Cat cat cat</p>
+  <a href="\\presfile01\faculty-documents\amudd\Programs\Cat\index.html"><img class="print"src="\\presfile01\faculty-documents\amudd\Programs\Cat\pawprint.jpg"></a>
+  </footer>
+</html>

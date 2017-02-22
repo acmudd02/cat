@@ -1,0 +1,117 @@
+/*=========================================
+               Basic Styles
+=========================================*/
+.body{
+  background-color: #00ffff;
+  margin: auto;
+  flex: 1;
+  flex-flow: wrap;
+}
+img {
+  width: 100%;
+}
+.print{
+  max-height: 40px;
+  max-width: 40px;
+}
+.banner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrap{
+  background-color: #00FFFF;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.content_1{
+  background-color: white;
+  max-width: 100%;
+  border-color: #00FFFF;
+  border-style: solid;
+  border-width: 15px;
+  padding: 10px;
+  margin: 20px auto;
+  flex: 1;
+  align-items: center;
+}
+.content_2{
+  background-color: white;
+  color: black;
+  border-color: #00FFFF;
+  border-style: solid;
+  border-width: 15px;
+  padding: 10px;
+  margin: 20px auto;
+  flex: 1;
+}
+.content_3{
+  background-color: white;
+  border-color: #00FFFF;
+  border-style: solid;
+  border-width: 15px;
+  padding: 10px;
+  margin: 20px auto;
+  flex: 1;
+}
+.wrapper{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.foot{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.gal{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+/*=========================================
+              Media Queries
+=========================================*/
+
+           /*For Tablets*/
+@media only screen and (min-width: 700px){
+.wrap{
+  flex-direction: row;
+}}
+          /*For PC Screens*/
+@media only screen and (min-width:800px){
+.wrap{
+  flex-wrap: wrap;
+}
+.content_2{
+  flex: 2;
+}
+}
+
+/*=========================================
+              Light Box
+=========================================*/
+#lightbox {
+    position:fixed; /* keeps the lightbox window in the current viewport */
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url(overlay.png) repeat;
+    text-align:center;
+}
+#lightbox p {
+    text-align:right;
+    color:black;
+    margin-right:20px;
+    font-size:12px;
+}
+#lightbox img {
+    height: 90vh;
+    box-shadow:0 0 25px #111;
+    -webkit-box-shadow:0 0 25px #111;
+    -moz-box-shadow:0 0 25px #111;
+    max-width:940px;
+}
